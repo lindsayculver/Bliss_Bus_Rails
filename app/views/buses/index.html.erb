@@ -1,8 +1,26 @@
-<h1>Bliss Bus</h1>
+<h2>{ categories }</h2>
 
-<ul>
-  <% @buses.each do |bus| %>
-  <li><%= bus.name %></li>
-  <li><%= link_to bus.name, bus_path(bus) %>
-  <% end %>
-</ul>
+<center>
+  <div class="row">
+    <% @buses.each do |bus| %>
+    <div class="col-md-4">
+      <h2><%= bus.name %><br></h2>
+      <h3>
+        <%= link_to bus_path(bus) do %>
+        <%= image_tag("#{bus.image}") %>
+        <%end%>
+      </h3>
+    </div>
+    <% end %>
+  </div>
+</center>
+
+<hr>
+
+<center>
+  <div class="click">
+    <%= link_to new_bus_path do %>
+    <% end %>
+  </div>
+  <h2><%= link_to "Add Bus", new_bus_path %></h2>
+</center>

@@ -1,17 +1,14 @@
 class BusesController < ApplicationController
   def index
     @buses = Bus.all
-    render :index
   end
 
   def show
     @bus = Bus.find(params[:id])
-    render :show
   end
 
   def new
     @bus = Bus.new
-    render :new
   end
 
   def create
@@ -23,9 +20,28 @@ class BusesController < ApplicationController
   end
 end
 
+  def edit
+    @bus = Bus.find(params[:id])
+  end
+
+  def update
+    @bus = Bus.find(params[:id])
+    if @bus.update(bus_params)
+      redirect_to bus_path
+    else
+      render :edit
+    end
+   end
+
+   def destroy
+     @bus = Bus.find(params[:id])
+     @bus.destroy
+     redirect_to buses_path
+   end
+
   private
     def bus_params
-      params.require(:bus).permit(:name)
+      params.require(:bus).permit(:name, :type, :image)
     end
 
   end

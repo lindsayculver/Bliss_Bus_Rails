@@ -1,11 +1,4 @@
-<h1>New Bus</h1>
+<h2>Got a New Type of Bus?</h2>
+<h3>give it a category</h3>
 
-<%= form_for @bus do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %>
-<%= f.label :type %>
-<%= f.text_field :type %>
-<%= f.label :image %>
-<%= f.text_field :image %>
-<%= f.submit  %>
-<% end %>
+<%= render "form" %>

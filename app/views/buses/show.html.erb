@@ -1,3 +1,8 @@
+<%= link_to "Home", buses_path %>
+<%= link_to "Edit", edit_bus_path(@bus) %>
+<%= link_to "Delete", bus_path(@bus),
+   {:method => "delete"} %>
+<center>
 <h1><%= @bus.name %></h1>
-
-<p><%= link_to "Return to Buses", buses_path %></p>
+<%= image_tag("#{@bus.image}") %>
+</center>

@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href='https://fonts.googleapis.com/css?family=Sintony' rel='stylesheet' type='text/css'>
   <title>BlissBus</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+<div class='container'>
 <body>
+  <nav>
+    <h1>Bus Bliss { Blog } </h1>
+    <h3>tiny living on wheels</h3>
+  <center>
+     <%= image_tag("bus.png") %> <br>
+  </center>
 
+      <%= yield(:nav) %>
+    <hr>
+  </nav>
 <%= yield %>
 
 </body>
