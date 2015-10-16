@@ -14,6 +14,7 @@ class BusesController < ApplicationController
   def create
     @bus = Bus.new(bus_params)
     if @bus.save
+      flash[:notice] = "Success!"
       redirect_to buses_path
     else
       render :new
