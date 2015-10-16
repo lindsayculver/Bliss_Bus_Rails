@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
- resources :buses
+ resources :buses do
+   resources :posts
+ end
 end
