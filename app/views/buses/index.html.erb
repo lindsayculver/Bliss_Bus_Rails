@@ -1,0 +1,8 @@
+<h1>Bliss Bus</h1>
+
+<ul>
+  <% @buses.each do |bus| %>
+  <li><%= bus.name %></li>
+  <li><%= link_to bus.name, bus_path(bus) %>
+  <% end %>
+</ul>
