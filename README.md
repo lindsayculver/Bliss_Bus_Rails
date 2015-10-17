@@ -1,6 +1,6 @@
 # _BLISS BUS_
 
-##### A blog for tiny, mobile living.
+##### A blog for tiny, mobile living. Made with Ruby on Rails.
 
 #### By _**Lindsay Culver**_
 
