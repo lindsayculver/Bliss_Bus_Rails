@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sass-rails', '>= 3.2'
+gem 'simple_form', '~> 3.2.0'
 
 group :development do
   gem 'byebug'
