@@ -9,21 +9,25 @@
 <h1><%= @bus.name %></h1>
 <%= image_tag("#{@bus.image}") %>
 
-<% if @bus.posts.any? %>
-<h4>{ Posts }</h4>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+  <% if @bus.posts.any? %>
+  <h4>{ Posts }</h4>
 
 
-<% @bus.posts.each do |post| %>
+  <% @bus.posts.each do |post| %>
 
-  <h4><%= post.name %></h4>
-  <p><%= post.text %></p>
-  <%= link_to "{ delete this post ^ }", bus_post_path(@bus, post),
-    {:method => "delete"} %>
-  <% end %>
+    <h4><%= post.name %></h4>
+    <p><%= post.text %></p>
+    <%= link_to "{ delete this post ^ }", bus_post_path(@bus, post),
+      {:method => "delete"} %>
+    <% end %>
 
 
-  <% else %>
-  <p>There are no posts yet!</p>
-  <% end %>
-  <p><%= link_to "Add a post", new_bus_post_path(@bus) %></p>
+    <% else %>
+    <p>There are no posts yet!</p>
+    <% end %>
+    <h4><%= link_to "Add a post", new_bus_post_path(@bus) %></h4>
+  </div>
+</div>
 </center>
