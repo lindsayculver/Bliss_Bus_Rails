@@ -10,6 +10,6 @@
 
 <%= simple_form_for [@bus, @post] do |f| %>
   <%= f.input :name %>
-  <%= f.input :text %>
+  <%= f.text_area :text %>
   <%= f.button :submit %>
 <% end %>
