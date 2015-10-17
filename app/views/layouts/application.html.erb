@@ -13,8 +13,11 @@
   <nav>
     <h1>Bliss Bus { Blog } </h1>
     <h3>tiny living on wheels</h3>
+
   <center>
-     <%= image_tag("bus.png") %><br>
+     <%= link_to root_path do %>
+     <%= image_tag("bus.png") %>
+     <% end %><br>
   </center>
 
       <%= yield(:nav) %>
